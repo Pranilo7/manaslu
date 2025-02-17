@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Blaze House - Manaslu World School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #2A5C82;
+      --accent-blue: #3A86B8;
+      --light-blue: #E3F2FD;
+      --dark-blue: #1A3657;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, var(--light-blue) 0%, #ffffff 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+      color: white;
+      padding: 4rem 2rem 6rem;
+      position: relative;
+      overflow: hidden;
+      animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .header-wave {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23E3F2FD" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,181.3C672,181,768,139,864,128C960,117,1056,139,1152,154.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .main-logo {
+      width: 120px;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+      animation: fadeIn 1s 0.3s backwards;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin: 0.5rem 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      animation: fadeIn 0.8s 0.5s backwards;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    a.button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 2.5rem;
+      background: var(--accent-blue);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 15px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      transform: scale(1);
+      box-shadow: 0 8px 20px rgba(58, 134, 184, 0.3);
+    }
+
+    a.button:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 12px 25px rgba(58, 134, 184, 0.4);
+      background: var(--primary-blue);
+    }
+
+    a.button::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 20%, rgba(255,255,255,0.15) 50%, transparent 80%);
+      transform: rotate(45deg);
+      transition: all 0.6s;
+    }
+
+    a.button:hover::after {
+      left: 150%;
+    }
+
+    .content-section {
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 3rem auto;
+      box-shadow: 0 10px 30px rgba(42, 92, 130, 0.1);
+      max-width: 1000px;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s 0.8s backwards;
+    }
+
+    .sports-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .sport-card {
+      background: var(--light-blue);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .sport-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .sport-icon {
+      font-size: 2.5rem;
+      color: var(--accent-blue);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      header {
+        padding: 3rem 1.5rem 5rem;
+      }
+
+      .content-section {
+        padding: 2rem;
+        margin: 2rem auto;
+      }
+
+      .button {
+        padding: 1.2rem 2rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="https://www.blissfulbydesign.com/product-page/blue-blaze-temporary-tattoos" alt="Blue Blaze Logo" class="main-logo">
+      <h1>Blue Blaze House</h1>
+      <p>Champions of Manaslu World School</p>
+    </div>
+    <div class="header-wave"></div>
+  </header>
+
+  <div class="container">
+    <section class="content-section">
+      <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">
+        Igniting Excellence in Academics and Athletics
+      </p>
+      
+      <div class="button-container">
+        <a class="button" href="https://www.facebook.com/Manasluworldschool/" target="_blank">
+          <i class="fas fa-school"></i> School Profile
+        </a>
+        
+        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdOJcRyil5gEP7uDDNvPBBcrkNt9E956BKF_3QjKVf_FouUaA/viewform" target="_blank">
+          <i class="fas fa-comment-dots"></i> Submit Feedback
+        </a>
+        
+        <a class="button" href="YOUR_VOTING_LINK" target="_blank">
+          <i class="fas fa-vote-yea"></i> House Voting
+        </a>
+      </div>
+
+      <div class="sports-highlights">
+        <div class="sport-card">
+          <i class="fas fa-trophy sport-icon"></i>
+          <h3>Champions League</h3>
+          <p>2 times Champions</p>
+        </div>
+        
+        <div class="sport-card">
+          <i class="fas fa-medal sport-icon"></i>
+          <h3>Athletics Dominance</h3>
+          <p>Record holders in 100m, 200m, and relay races</p>
+        </div>
+        
+        <div class="sport-card">
+          <i class="fas fa-basketball-ball sport-icon"></i>
+          <h3>Basketball Pros</h3>
+          <p>Undefeated in school house-wise basketball tournament</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; text-align: center;">
+        <h2 style="color: var(--dark-blue);">Upcoming Events</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin: 1rem 0;"> Parent's Day </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
